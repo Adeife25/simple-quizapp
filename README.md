@@ -33,7 +33,8 @@ Add animations or sound effects for better engagement
 
 If hosted, add your live link here 👇
 
-https://your-username.github.io/simple-quiz-app/
+ https://adeife25.github.io/simple-quizapp/
+
 
 
 📝 License
