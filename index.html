@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            font-size: 150%;
+        }
+        h1 {
+            text-align: center;
+            width: 50px
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+    
+        .question p {
+            font-weight: bold;
+        }
+        .question label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 46px;
+            color: rgb(56, 47, 244);
+        }
+        </style>
+    <h1>Simple Quiz </h1>
+<div id="q1" style="display:block">
+  <form>
+  <p>1. Which HTTP method is typically used to update existing data on a server?</p>
+  <label><input type="radio" name="http" value="GET"> GET</label><br>
+  <label><input type="radio" name="http" value="POST"> POST</label><br>
+  <label><input type="radio" name="http" value="DELETE"> DELETE</label><br>
+  <label><input type="radio" name="http" value="PUT"> PUT</label><br>
+</form>
+<button id="q1" onclick="nextQuestion()">Next</button>
+</div>
+
+<div id="q2" style="display:none">
+    <form">
+        <p>2.What does CRUD stand for in backend development? </p>
+        <label><input type="radio" name="crud" value="Create, Read, Update, Delete"> Create, Read, Update, Delete</label><br>
+        <label><input type="radio" name="crud" value="Connect, Retrieve, Update, Delete"> Connect, Run, Update, Delete</label><br>
+        <label><input type="radio" name="crud" value="Create, Render, Use, Delete"> Create, Run, Update, Delete</label><br>
+        <label><input type="radio" name="crud" value="Connect, Read, Update, Deploy"> Connect, Read, Update, Delete</label><br>
+    </form>
+    <button onclick="previousQuestion()">Back</button>
+    <button id="q2" onclick="nextQuestion()">Next</button>
+</div>
+
+<div id="q3" style="display:none">
+    <form>
+    <p>3. Which of the following is a relational database?</p>
+    <label><input type="radio" name="database" value="MongoDB"> MongoDB</label><br>
+    <label><input type="radio" name="database" value="MySQL"> MySQL</label><br>
+    <label><input type="radio" name="database" value="Cassandra"> Cassandra</label><br>
+    <label><input type="radio" name="database" value="Redis"> Redis</label><br>
+    </form>
+    <button onclick="previousQuestion()">Back</button>
+    <button id="q3" onclick="nextQuestion()">Next</button>
+</div>
+
+<div id="q4" style="display:none">
+    <form>
+        <p>4. Which tool is commonly used to test RESTful APIs?</p>
+        <label><input type="radio" name="api" value="Postman"> Postman</label><br>
+        <label><input type="radio" name="api" value="Docker"> Docker</label><br>
+        <label><input type="radio" name="api" value="Kubernetes"> Kubernetes</label><br>
+        <label><input type="radio" name="api" value="Jenkins"> Jenkins</label><br>
+    </form>
+
+    <p id ="results"></p>
+    <button onclick="previousQuestion()">Back</button>
+        <button onclick="showResults()">Submit</button>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+
+    </p>
+  
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
